@@ -4,23 +4,26 @@
 #include <stdlib.h>
 //-------------------------
 
-#define SIZE 900
+//-------DEFINED VARIABLES-----
+#define SIZE 500
+//----------------------------
+
 //-----Prototypes-----
-void subcriptMethod();
+void pointerMethod();
 //-------------------
 
 
 //===========MAIN=================
 int main(void){
 
-    subcriptMethod();
+    pointerMethod();
 
     return 0;
 }
 //===========END MAIN=================
 
-
-void subcriptMethod(){
+//---------------FUNCTON BODIES--------------------------
+void pointerMethod(){
     int subArr[SIZE][SIZE];
     int i, j;
     clock_t begin, finish;
@@ -30,11 +33,12 @@ void subcriptMethod(){
 
     for(i = 0; i < SIZE; i++){
         for(j=0; j < SIZE; j++){
-            subArr[i][j] = i+j;
+            *(*(subArr+i)+j)=i+j;
+            //printf("This is the Contents: ", subArr);
         }
     }
     finish = clock();
-    totalTime =((double)(begin-finish)/CLOCKS_PER_SEC);
-    printf("Subscript Method: %f sec\n", totalTime);
+    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);
+    printf("Pointer Method: %f sec\n", totalTime);
 }
-
+//-------------------------------------------------------------------
