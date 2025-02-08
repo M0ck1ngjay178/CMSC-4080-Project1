@@ -4,6 +4,10 @@
 #include <stdlib.h>
 //-------------------------
 
+//-------SOURCE-----
+//https://www.tutorialspoint.com/c_standard_library/c_function_clock.htm
+//-------------------
+
 //-------DEFINED VARIABLES-----
 #define SIZE 1000
 //----------------------------
