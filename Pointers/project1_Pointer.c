@@ -38,15 +38,14 @@ void pointerMethod(){
     begin = clock();                    //start clock
 
     for(i = 0; i < SIZE; i++){          //outer for loop to count i up till SIZE, incrementing i
-        for(j=0; j < SIZE; j++){
-            subArr[i][j] = i+j;
-            //printf("This is the Contents: ", subArr);
+        for(j=0; j < SIZE; j++){        //inner for loop to count j up till SIZE, incrementing j
+            subArr[i][j] = i+j;         //perform artithmatic using subscripts
         }
     }
-    finish = clock();
-    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);
-    printf("Subscript Method: %f sec\n", totalTime);
-    freeArray(subArr, SIZE);
+    finish = clock();                                   //end clock, store finishing time
+    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC); //perform total time calculation
+    printf("Pointer Method: %f sec\n", totalTime);      //display overall stats 
+    freeArray(subArr, SIZE);                            //deallocat array
 }
 //----------ALLOCATE-------------
 int **allocateArr(int size) {
