@@ -23,7 +23,6 @@ int **allocateArr(int size);
 int main(void){
 
     subcriptMethod();
-
     return 0;
 }
 //===========END MAIN=================

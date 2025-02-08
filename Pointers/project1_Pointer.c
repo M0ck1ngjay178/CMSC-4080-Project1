@@ -22,8 +22,7 @@ int **allocateArr(int size);
 //===========MAIN=================
 int main(void){
 
-    pointerMethod();
-
+    pointerMethod(); //call PointerMetod function for processing
     return 0;
 }
 //===========END MAIN=================
@@ -31,14 +30,14 @@ int main(void){
 //---------------FUNCTON BODIES--------------------------
 void pointerMethod(){
     //int subArr[SIZE][SIZE];
-    int **subArr = allocateArr(SIZE);
-    int i, j;
-    clock_t begin, finish;
-    double totalTime;
+    int **subArr = allocateArr(SIZE);   // call allocation function to build array
+    int i, j;                           //declare variables for loop counters
+    clock_t begin, finish;              //initialize timer variables
+    double totalTime;                   //double variable to store total calculated time
 
-    begin = clock();
+    begin = clock();                    //start clock
 
-    for(i = 0; i < SIZE; i++){
+    for(i = 0; i < SIZE; i++){          //outer for loop to count i up till SIZE, incrementing i
         for(j=0; j < SIZE; j++){
             subArr[i][j] = i+j;
             //printf("This is the Contents: ", subArr);
