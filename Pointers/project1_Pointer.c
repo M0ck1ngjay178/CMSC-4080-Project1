@@ -9,7 +9,7 @@
 //-------------------
 
 //-------DEFINED VARIABLES-----
-#define SIZE 11000
+#define SIZE 8000
 //----------------------------
 
 //-----Prototypes-----
