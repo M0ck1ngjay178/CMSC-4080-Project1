@@ -22,7 +22,7 @@ int **allocateArr(int size);
 //===========MAIN=================
 int main(void){
 
-    pointerMethod(); //call PointerMetod function for processing
+    pointerMethod(); //call PointerMethod function for processing
     return 0;
 }
 //===========END MAIN=================
@@ -35,17 +35,17 @@ void pointerMethod(){
     clock_t begin, finish;              //initialize timer variables
     double totalTime;                   //double variable to store total calculated time
 
-    begin = clock();                    //start clock
+    begin = clock();                        //start clock
 
-    for(i = 0; i < SIZE; i++){          //outer for loop to count i up till SIZE, incrementing i
-        for(j=0; j < SIZE; j++){        //inner for loop to count j up till SIZE, incrementing j
-            subArr[i][j] = i+j;         //perform artithmatic using subscripts
+    for(i = 0; i < SIZE; i++){              //outer for loop to count i up till SIZE, incrementing i
+        for(j=0; j < SIZE; j++){            //inner for loop to count j up till SIZE, incrementing j
+            *(*(subArr + i) + j) = i + j;   //perform artithmatic using pointer arithmatic
         }
     }
     finish = clock();                                   //end clock, store finishing time
     totalTime =((double)(finish-begin)/CLOCKS_PER_SEC); //perform total time calculation
     printf("Pointer Method: %f sec\n", totalTime);      //display overall stats 
-    freeArray(subArr, SIZE);                            //deallocat array
+    freeArray(subArr, SIZE);                            //deallocate array
 }
 //----------ALLOCATE-------------
 int **allocateArr(int size) {                           //function to create array

@@ -22,7 +22,7 @@ int **allocateArr(int size);
 //===========MAIN=================
 int main(void){
 
-    subcriptMethod();
+    subcriptMethod();           //call SubscriptMethod function for processing
     return 0;
 }
 //===========END MAIN=================
@@ -30,49 +30,46 @@ int main(void){
 //---------------FUNCTON BODIES--------------------------
 void subcriptMethod(){
     //int subArr[SIZE][SIZE];
-    int **subArr = allocateArr(SIZE);
-    int i, j;
-    clock_t begin, finish;
-    double totalTime;
+    int **subArr = allocateArr(SIZE);           // call allocation function to build array
+    int i, j;                                   //declare variables for loop counters
+    clock_t begin, finish;                      //initialize timer variables
+    double totalTime;                           //double variable to store total calculated time
 
-    begin = clock();
+    begin = clock(); //start clock
 
-    for(i = 0; i < SIZE; i++){
-        for(j=0; j < SIZE; j++){
-            subArr[i][j] = i+j;
-            //printf("This is the Contents: ", subArr);
+    for(i = 0; i < SIZE; i++){                  //outer for loop to count i up till SIZE, incrementing i
+        for(j=0; j < SIZE; j++){                //inner for loop to count j up till SIZE, incrementing j
+            subArr[i][j] = i+j;                 //perform artithmatic using subscripts
         }
     }
-    finish = clock();
-    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);
-    printf("Subscript Method: %f sec\n", totalTime);
-    freeArray(subArr, SIZE);
+    finish = clock();                                       //end clock, store finishing time
+    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);     //perform total time calculation
+    printf("Subscript Method: %f sec\n", totalTime);        //display overall stats 
+    freeArray(subArr, SIZE);//deallocate array
 }
 
-
 //----------ALLOCATE-------------
-int **allocateArr(int size) {
-    int **arr = (int **)malloc(size * sizeof(int *));
-    if (!arr) {
-        printf("Error in Allocation");
-        exit(EXIT_FAILURE);
+int **allocateArr(int size) {                           //function to create array
+    int **arr = (int **)malloc(size * sizeof(int *));   //initalize array
+    if (!arr) {                                         //check if array doenst exist
+        printf("Error in Allocation");                  //diplay error msg
+        exit(EXIT_FAILURE);                             //exit proccess
     }
     
-    for (int i = 0; i < size; i++) {
-        arr[i] = (int *)malloc(size * sizeof(int));
-        if (!arr[i]) {
-            printf("Error in Allocation");
-            exit(EXIT_FAILURE);
+    for (int i = 0; i < size; i++) {                    //outer for loop to count i up till SIZE, incrementing i
+        arr[i] = (int *)malloc(size * sizeof(int));     //allocte for an array of size, and assign to arr[i]
+        if (!arr[i]) {                                  //check if array allocation failed
+            printf("Error in Allocation");              //diplay error msg
+            exit(EXIT_FAILURE);                         //exit proccess
         }
     }
-    return arr;
+    return arr;                                         //return value of array
 }
 
 //-----------free memory------------
-void freeArray(int **arr, int size) {
-    for (int i = 0; i < size; i++) {
-        free(arr[i]);
+void freeArray(int **arr, int size) {                   //function to deallocate memory
+    for (int i = 0; i < size; i++) {                    //outer for loop to count i up till SIZE, incrementing i
+        free(arr[i]);                                   //call free
     }
-    free(arr);
+    free(arr);                                          //call free
 }
-//-------------------------------------------------------------------
