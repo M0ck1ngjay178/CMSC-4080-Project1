@@ -1,0 +1,31 @@
+/*
+//===========MAIN=================
+int main(void){
+
+    pointerMethod();
+
+    return 0;
+}
+//===========END MAIN=================
+
+//---------------FUNCTON BODIES--------------------------
+void pointerMethod(){
+    int subArr[SIZE][SIZE];
+    int i, j;
+    clock_t begin, finish;
+    double totalTime;
+
+    begin = clock();
+
+    for(i = 0; i < SIZE; i++){
+        for(j=0; j < SIZE; j++){
+            *(*(subArr+i)+j)=i+j;
+            //printf("This is the Contents: ", subArr);
+        }
+    }
+    finish = clock();
+    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);
+    printf("Pointer Method: %f sec\n", totalTime);
+}
+//-------------------------------------------------------------------
+*/
