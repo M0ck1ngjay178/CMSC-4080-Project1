@@ -4,6 +4,10 @@
 #include <stdlib.h>
 //-------------------------
 
+//-------SOURCE-----
+//https://www.tutorialspoint.com/c_standard_library/c_function_clock.htm
+//-------------------
+
 //-------DEFINED VARIABLES-----
 #define SIZE 1000
 //----------------------------
@@ -51,14 +55,14 @@ void subcriptMethod(){
 int **allocateArr(int size) {
     int **arr = (int **)malloc(size * sizeof(int *));
     if (!arr) {
-        perror("Allocation Error");
+        printf("Error in Allocation");
         exit(EXIT_FAILURE);
     }
     
     for (int i = 0; i < size; i++) {
         arr[i] = (int *)malloc(size * sizeof(int));
         if (!arr[i]) {
-            perror("Allocation Error");
+            printf("Error in Allocation");
             exit(EXIT_FAILURE);
         }
     }

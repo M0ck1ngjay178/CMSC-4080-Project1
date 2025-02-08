@@ -53,14 +53,14 @@ void pointerMethod(){
 int **allocateArr(int size) {
     int **arr = (int **)malloc(size * sizeof(int *));
     if (!arr) {
-        perror("Allocation Error");
+        printf("Error in Allocation");
         exit(EXIT_FAILURE);
     }
     
     for (int i = 0; i < size; i++) {
         arr[i] = (int *)malloc(size * sizeof(int));
         if (!arr[i]) {
-            perror("Allocation Error");
+            printf("Error in Allocation");
             exit(EXIT_FAILURE);
         }
     }
