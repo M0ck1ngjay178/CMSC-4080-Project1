@@ -63,7 +63,7 @@ void pointerMethod(){
 
 void banner(double val){
     printf("\n----POINTER ARRAY PROCESSING---\n");
-    printf("Pointer Method: %f sec\n", val);
+    printf("Pointer Method: %.4f sec\n", val);
     printf("---------------------------------\n\n");
 }
 

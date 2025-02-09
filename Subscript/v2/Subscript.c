@@ -56,7 +56,7 @@ void subscriptMethod(){
 
 void banner(double val){
     printf("\n----SUBSCRIPT ARRAY PROCESSING---\n");
-    printf("Subscript Method: %f sec\n", val);
+    printf("Subscript Method: %.4f sec\n", val);
     printf("---------------------------------\n\n");
 }
 
