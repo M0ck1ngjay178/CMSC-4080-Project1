@@ -16,6 +16,7 @@
 void pointerMethod();
 void freeArray(int **arr, int size);
 int **allocateArr(int size);
+void banner(double val);
 //-------------------
 
 
@@ -44,7 +45,8 @@ void pointerMethod(){
     }
     finish = clock();                                   //end clock, store finishing time
     totalTime =((double)(finish-begin)/CLOCKS_PER_SEC); //perform total time calculation
-    printf("Pointer Method: %f sec\n", totalTime);      //display overall stats 
+    //printf("Pointer Method: %f sec\n", totalTime);      //display overall stats 
+    banner(totalTime);
     freeArray(subArr, SIZE);                            //deallocate array
 }
 //----------ALLOCATE-------------
@@ -73,4 +75,9 @@ void freeArray(int **arr, int size) {                   //function to deallocate
     free(arr);                                          //call free
 }
 
+void banner(double val){
+    printf("\n----POINTER ARRAY PROCESSING---\n");
+    printf("Pointer Method: %f sec\n", val);
+    printf("---------------------------------\n\n");
+}
 

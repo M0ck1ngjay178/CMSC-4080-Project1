@@ -16,6 +16,7 @@
 void subcriptMethod();
 void freeArray(int **arr, int size);
 int **allocateArr(int size);
+void banner(double val);
 //-------------------
 
 
@@ -44,7 +45,8 @@ void subcriptMethod(){
     }
     finish = clock();                                       //end clock, store finishing time
     totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);     //perform total time calculation
-    printf("Subscript Method: %f sec\n", totalTime);        //display overall stats 
+    //printf("Subscript Method: %f sec\n", totalTime);        //display overall stats 
+    banner(totalTime);
     freeArray(subArr, SIZE);//deallocate array
 }
 
@@ -72,4 +74,10 @@ void freeArray(int **arr, int size) {                   //function to deallocate
         free(arr[i]);                                   //call free
     }
     free(arr);                                          //call free
+}
+
+void banner(double val){
+    printf("\n----SUBSCRIPT ARRAY PROCESSING---\n");
+    printf("Subscript Method: %f sec\n", val);
+    printf("---------------------------------\n\n");
 }
