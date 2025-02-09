@@ -51,12 +51,15 @@ void subscriptMethod(){
     
     finish = clock();
     totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);
-    banner(totalTime);
+    banner(totalTime);//, ITERATIONS, SIZE);
 }
 
-void banner(double val){
+void banner(double val) {  
     printf("\n----SUBSCRIPT ARRAY PROCESSING---\n");
     printf("Subscript Method: %.4f sec\n", val);
+    printf("Iterations: %d\n", ITERATIONS);  
+    printf("2D Array Size: [%d] x [%d]\n", SIZE, SIZE);
     printf("---------------------------------\n\n");
 }
+
 

@@ -61,9 +61,11 @@ void pointerMethod(){
     banner(totalTime);
 }
 
-void banner(double val){
+void banner(double val) {  
     printf("\n----POINTER ARRAY PROCESSING---\n");
     printf("Pointer Method: %.4f sec\n", val);
+    printf("Iterations: %d\n", ITERATIONS);  
+    printf("2D Array Size: [%d] x [%d]\n", SIZE, SIZE);
     printf("---------------------------------\n\n");
 }
 
