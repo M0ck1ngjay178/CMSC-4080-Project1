@@ -47,6 +47,7 @@ void subscriptMethod(){
         b = (i * 3) % SIZE;
         subArr[a][b]+=a+b;
     }
+    
     finish = clock();
     totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);
     banner(totalTime);

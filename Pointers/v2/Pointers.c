@@ -16,7 +16,7 @@
 
 //-------DEFINED VARIABLES-----
 #define SIZE 20
-#define ITERATIONS 2000000
+#define ITERATIONS 8000000
 //----------------------------
 
 //-----Prototypes-----
@@ -46,11 +46,8 @@ void pointerMethod(){
         a = i % SIZE;
         b = (i * 3) % SIZE;
         *(*(subArr + a) + b) = a + b;
-
-        //for(j=0; j < ITERATIONS; j++){
-            //*(*(subArr+i)+j)=i+j;
-        //}
     }
+    
     finish = clock();
     totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);
     banner(totalTime);

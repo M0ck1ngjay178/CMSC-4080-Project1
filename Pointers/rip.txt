@@ -29,3 +29,11 @@ void pointerMethod(){
 }
 //-------------------------------------------------------------------
 */
+
+/*for (i = 0; i < ITERATIONS / (SIZE * SIZE); i++) {  
+        for (a = 0; a < SIZE; a++) {  
+            for (b = 0; b < SIZE; b++) {  
+                subArr[a][b] = a + b;
+            }
+        }
+    }*/
