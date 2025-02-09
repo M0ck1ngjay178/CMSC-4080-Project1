@@ -13,7 +13,7 @@
 //https://www.tutorialspoint.com/c_standard_library/c_function_clock.htm
 //https://www.geeksforgeeks.org/difference-between-stack-allocated-and-heap-allocated-arrays/
 //-------------------
-
+//TIME FOR SIZE 20 @ 8000000 ITERATIONS, Pointer Method: 5.055000 sec
 //-------DEFINED VARIABLES-----
 #define SIZE 20
 #define ITERATIONS 8000000
