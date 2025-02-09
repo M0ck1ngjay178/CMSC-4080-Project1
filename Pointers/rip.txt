@@ -37,3 +37,13 @@ void pointerMethod(){
             }
         }
     }*/
+
+    //*(*(subArr + a) + b) = a + b;  // Pointer-based assignment
+                //sum += *(*(arr + i) + b);   // Pointer-based sum
+
+
+ /*for(i = 0; i < ITERATIONS; i++){
+        a = i % SIZE; //ensure x is between the range of array size
+        b = (i * 3) % SIZE; //randomize access
+        subArr[a][b]+=a+b;
+    }*/

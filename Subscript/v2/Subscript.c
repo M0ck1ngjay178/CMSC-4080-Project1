@@ -27,7 +27,6 @@ void banner(double val);
 
 //===========MAIN=================
 int main(void){
-
     subscriptMethod();
     return 0;
 }
@@ -42,10 +41,12 @@ void subscriptMethod(){
 
     begin = clock();
 
-    for(i = 0; i < ITERATIONS; i++){
-        a = i % SIZE;
-        b = (i * 3) % SIZE;
-        subArr[a][b]+=a+b;
+    for (i = 0; i < ITERATIONS; i++) {
+        for (a = 0; a < SIZE; a++) {
+            for (b = 0; b < SIZE; b++) {
+                subArr[a][b]+=a+b;    
+            }
+        }
     }
     
     finish = clock();
@@ -54,8 +55,8 @@ void subscriptMethod(){
 }
 
 void banner(double val){
-    printf("\n----POINTER ARRAY PROCESSING---\n");
-    printf("Pointer Method: %f sec\n", val);
+    printf("\n----SUBSCRIPT ARRAY PROCESSING---\n");
+    printf("Subscript Method: %f sec\n", val);
     printf("---------------------------------\n\n");
 }
 
