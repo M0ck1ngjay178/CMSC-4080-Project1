@@ -1,3 +1,8 @@
+//---------HEADER--------------
+//CMSC-4080-STRUCTURES-PROJECT1
+//MARGO BONAL, DUE: WED 2/12/25
+//----------------------------
+
 //---------LIBRARIES---------
 #include <stdio.h>
 #include <time.h>
@@ -6,6 +11,7 @@
 
 //-------SOURCE-----
 //https://www.tutorialspoint.com/c_standard_library/c_function_clock.htm
+//https://www.geeksforgeeks.org/difference-between-stack-allocated-and-heap-allocated-arrays/
 //-------------------
 
 //-------DEFINED VARIABLES-----
