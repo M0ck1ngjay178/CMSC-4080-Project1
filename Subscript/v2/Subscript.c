@@ -16,7 +16,7 @@
 
 //-------DEFINED VARIABLES-----
 #define SIZE 20
-#define ITERATIONS 2000000
+#define ITERATIONS 9000000
 //----------------------------
 
 //-----Prototypes-----

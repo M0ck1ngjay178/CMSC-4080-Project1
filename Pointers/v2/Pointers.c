@@ -16,7 +16,7 @@
 //TIME FOR SIZE 20 @ 8000000 ITERATIONS, Pointer Method: 5.055000 sec
 //-------DEFINED VARIABLES-----
 #define SIZE 20
-#define ITERATIONS 8000000
+#define ITERATIONS 9000000
 //----------------------------
 
 //-----Prototypes-----
