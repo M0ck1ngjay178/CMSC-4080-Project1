@@ -13,7 +13,7 @@
 //https://www.tutorialspoint.com/c_standard_library/c_function_clock.htm
 //https://www.geeksforgeeks.org/difference-between-stack-allocated-and-heap-allocated-arrays/
 //-------------------
-//TIME FOR SIZE 20 @ 8000000 ITERATIONS, Pointer Method: 5.055000 sec
+
 //-------DEFINED VARIABLES-----
 #define SIZE 20
 #define ITERATIONS 9000000
@@ -28,36 +28,31 @@ void banner(double val);
 //===========MAIN=================
 int main(void){
 
-    pointerMethod();
+    pointerMethod();//call pointer method
     return 0;
 }
 //===========END MAIN=================
 
 //---------------FUNCTON BODIES--------------------------
 void pointerMethod(){
-    int subArr[SIZE][SIZE];
-    int i, j, a, b;
-    clock_t begin, finish;
-    double totalTime;
+    int subArr[SIZE][SIZE];//2D array
+    int i, j, a, b;   //initialize all variables
+    clock_t begin, finish;//initialize timers
+    double totalTime;//double for total time
 
-    begin = clock();
+    begin = clock();//start timer
 
-    /*for(i = 0; i < ITERATIONS; i++){
-        a = i % SIZE;
-        b = (i * 3) % SIZE;
-        *(*(subArr + a) + b) = a + b;
-    }*/
 
-    for (i = 0; i < ITERATIONS; i++) {
-        for (a = 0; a < SIZE; a++) {
-            for (b = 0; b < SIZE; b++) {
-                *(*(subArr + a) + b) = a + b;    
+    for (i = 0; i < ITERATIONS; i++) {//loop for defined iteration
+        for (a = 0; a < SIZE; a++) {//index through all rows
+            for (b = 0; b < SIZE; b++) {//index through all columns
+                *(*(subArr + a) + b) = a + b;     //pointer arithmetic method
             }
         }
     }
     
-    finish = clock();
-    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);
+    finish = clock();//end timer
+    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);//perform total time calculation
     banner(totalTime);
 }
 

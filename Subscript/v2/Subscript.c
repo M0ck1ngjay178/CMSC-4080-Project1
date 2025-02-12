@@ -27,31 +27,31 @@ void banner(double val);
 
 //===========MAIN=================
 int main(void){
-    subscriptMethod();
+    subscriptMethod();// call subscript method
     return 0;
 }
 //===========END MAIN=================
 
 //---------------FUNCTON BODIES--------------------------
 void subscriptMethod(){
-    int subArr[SIZE][SIZE];
-    int i, j, a, b;
-    clock_t begin, finish;
-    double totalTime;
+    int subArr[SIZE][SIZE]; //2D array
+    int i, j, a, b;  //initialize all variables
+    clock_t begin, finish;//initialize timers
+    double totalTime; //double for total time
 
-    begin = clock();
+    begin = clock(); //start timer
 
-    for (i = 0; i < ITERATIONS; i++) {
-        for (a = 0; a < SIZE; a++) {
-            for (b = 0; b < SIZE; b++) {
-                subArr[a][b]+=a+b;    
+    for (i = 0; i < ITERATIONS; i++) { //loop for defined iteration
+        for (a = 0; a < SIZE; a++) { //index through all rows
+            for (b = 0; b < SIZE; b++) { //index through all columns
+                subArr[a][b]+=a+b;    //subscript calculaton method
             }
         }
     }
     
-    finish = clock();
-    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC);
-    banner(totalTime);//, ITERATIONS, SIZE);
+    finish = clock();//end timer
+    totalTime =((double)(finish-begin)/CLOCKS_PER_SEC); //perform total time calculation
+    banner(totalTime);
 }
 
 void banner(double val) {  
