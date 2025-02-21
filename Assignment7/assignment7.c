@@ -1,5 +1,5 @@
 //---------HEADER--------------
-//CMSC-4080-STRUCTURES-ASSIGNMENT6
+//CMSC-4080-STRUCTURES-ASSIGNMENT7
 //MARGO BONAL, DUE: FRI 2/21/25
 //----------------------------
 
@@ -25,8 +25,6 @@ int main(void){
     
     while(look){
         menu();
-        //printf("Enter Choice: ");
-        //scanf("%d", &choose);
         //valid check input
         if (scanf("%d", &choose) != 1) {  // Check if input is valid
             printf("Invalid input! Please enter a number.\n");
@@ -50,7 +48,6 @@ int main(void){
                 return 0;
             default:
                 printf("!!!Invalid choice!!! Enter New Choice: ");
-
         }
 
     }
